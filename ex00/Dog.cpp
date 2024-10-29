@@ -13,15 +13,7 @@ Dog::Dog(const string& _type):Animal(_type)
 void Dog::makeSound() const
 {
     
-    cout << "HawHaw" << endl;
-}
-
-Dog::Dog(const Dog& other)
-{
-    if (this != &other)
-    {
-        this->type = type;
-    }
+    cout << "HawHaw!" << endl;
 }
 
 Dog& Dog::operator=(const Dog& other)
@@ -33,8 +25,18 @@ Dog& Dog::operator=(const Dog& other)
     return *this;
 }
 
+Dog::Dog(const Dog& other)
+{
+    if (this != &other)
+    {
+        this->type = type;
+    }
+}
+
+
+
 Dog::~Dog()
 {
-    cout << "Dog DeConstructor called" << endl;
+    cout << "Dog Destructor called" << endl;
 
 }

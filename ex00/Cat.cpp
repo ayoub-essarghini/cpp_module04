@@ -14,6 +14,7 @@ void Cat::makeSound() const
 {
     cout << "Miaaaaw" << endl;
 }
+
 Cat::Cat(const Cat& other)
 {
     if (this != &other)
@@ -32,6 +33,6 @@ Cat& Cat::operator=(const Cat& other)
 
 Cat::~Cat()
 {
-    cout << "Cat DeConstructor called" << endl;
+    cout << "Cat Destructor called" << endl;
 
 }
