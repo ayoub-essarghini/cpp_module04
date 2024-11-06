@@ -1,19 +1,22 @@
 #pragma once
-#include <iostream>
-using std::cout;
-using std::string;
+#ifndef AMATERIA_HPP
+#define AMATERIA_HPP
+
+#include <string>
+#include "ICharacter.hpp"
+// class ICharacter;
+
 class AMateria
 {
 protected:
-    string type;
+    std::string _type;
 
 public:
-    AMateria();
-    AMateria(string const &type);
-    AMateria(const AMateria &other);
-    AMateria &operator=(const AMateria &other);
-    string const &getType() const;
-    ~AMateria();
-    virtual AMateria *clone() const = 0;
-    virtual void use(ICharacter &target);
+    AMateria(std::string const & type);
+    virtual ~AMateria();
+    std::string const & getType() const;
+    virtual AMateria* clone() const = 0;
+    virtual void use(ICharacter& target);
 };
+
+#endif

@@ -1,6 +1,6 @@
-NAME= brain
-INCLUDES= ./includes/AAnimal.hpp
-SRCS= Cat.cpp Brain.cpp Dog.cpp AAnimal.cpp main.cpp
+NAME= materia
+#INCLUDES= ./includes/*.hpp
+SRCS= Character.cpp AMateria.cpp  Cure.cpp Ice.cpp MateriaSource.cpp main.cpp
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
@@ -8,7 +8,7 @@ OBJS=$(SRCS:.cpp=.o)
 
 all: $(NAME)
 
-$(NAME): $(INCLUDES) $(OBJS)
+$(NAME): $(OBJS) #$(INCLUDES) 
 	$(CXX) $(CXXFLAGS) -o $(NAME) $(OBJS)
 	@echo "DONE ✅"
 

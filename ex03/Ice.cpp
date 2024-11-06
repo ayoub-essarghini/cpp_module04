@@ -1,20 +1,17 @@
 #include "includes/Ice.hpp"
 
-Ice::Ice() : AMateria("ice")
+#include <iostream>
+
+Ice::Ice() : AMateria("ice") {}
+
+Ice::~Ice() {}
+
+AMateria* Ice::clone() const
 {
-    cout << "Ice constructor called" << "\n";
+    return new Ice();
 }
 
-Ice::Ice(const Ice &other)
+void Ice::use(ICharacter& target)
 {
-    *this = other;
-}
-Ice &Ice::operator=(const Ice &other)
-{
-    return *this;
-}
-
-Ice *Ice::clone() const
-{
-    return new Ice(*this);
+    std::cout << "* shoots an ice bolt at " << target.getName() << " *" << std::endl;
 }

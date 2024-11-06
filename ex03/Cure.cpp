@@ -1,20 +1,17 @@
 #include "includes/Cure.hpp"
 
-Cure::Cure() : AMateria("cure")
+#include <iostream>
+
+Cure::Cure() : AMateria("cure") {}
+
+Cure::~Cure() {}
+
+AMateria* Cure::clone() const
 {
-    cout << "Cure constructor called" << "\n";
+    return new Cure();
 }
 
-Cure::Cure(const Cure &other)
+void Cure::use(ICharacter& target)
 {
-    *this = other;
-}
-Cure &Cure::operator=(const Cure &other)
-{
-    return *this;
-}
-
-Cure *Cure::clone() const
-{
-    return new Cure(*this);
+    std::cout << "* heals " << target.getName() << "'s wounds *" << std::endl;
 }
