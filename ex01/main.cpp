@@ -39,5 +39,18 @@ int main()
 
     std::cout << "--------------End of deep copy test-------------" << std::endl;
 
+         std::cout << "-------------Starting deep copy test  of Cat----------------" << std::endl;
+    Cat originalCat;
+    originalCat.getBrain()->ideas[0] = "Eat";
+
+    Cat copiedCat = originalCat;
+
+    originalCat.getBrain()->ideas[0] = "Maiw";
+
+    std::cout << "Original Cat's first idea: " << originalCat.getBrain()->ideas[0] << std::endl;
+    std::cout << "Copied Cat's first idea: " << copiedCat.getBrain()->ideas[0] << std::endl;
+
+    std::cout << "--------------End of deep copy test of Cat-------------" << std::endl;
+
     return 0;
 }
