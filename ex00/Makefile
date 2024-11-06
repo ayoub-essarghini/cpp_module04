@@ -1,6 +1,6 @@
 NAME= animal
 INCLUDES= ./includes/Animal.hpp
-SRCS= Cat.cpp Dog.cpp Animal.cpp main.cpp
+SRCS= Cat.cpp Dog.cpp Animal.cpp WrongAnimal.cpp WrongCat.cpp main.cpp
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 

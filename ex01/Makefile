@@ -1,8 +1,8 @@
 NAME= brain
 INCLUDES= ./includes/Animal.hpp
-SRCS= Cat.cpp Brain.cpp Dog.cpp Animal.cpp main.cpp
+SRCS= Cat.cpp Brain.cpp Dog.cpp WrongAnimal.cpp WrongCat.cpp Animal.cpp main.cpp
 CXX = c++
-CXXFLAGS = -Wall -Wextra -Werror -std=c++98
+CXXFLAGS = -Wall -Wextra -Werror  -std=c++98
 
 OBJS=$(SRCS:.cpp=.o)
 

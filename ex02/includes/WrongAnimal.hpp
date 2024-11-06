@@ -5,17 +5,17 @@ using std::cout;
 using std::endl;
 using std::string;
 
-class Animal
+class WrongAnimal
 {
 protected:
     string type;
 
 public:
-    Animal();
-    Animal(const string &_type);
-    Animal(const Animal &other);
-    Animal& operator=(const Animal& other);
-    virtual ~Animal();
+    WrongAnimal();
+    WrongAnimal(const string &_type);
+    WrongAnimal(const WrongAnimal &other);
+    WrongAnimal& operator=(const WrongAnimal& other);
+    virtual ~WrongAnimal();
     void setType(const string &type);
     string getType() const;
     virtual void makeSound() const;

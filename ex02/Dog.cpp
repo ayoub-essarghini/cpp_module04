@@ -6,13 +6,18 @@ Dog::Dog() : brain(new Brain())
     std::cout << "Dog created" << std::endl;
 }
 
-
+Dog::Dog(const Dog &other) : AAnimal(other)
+{
+    std::cout << "Dog copy constructor called" << std::endl;
+    brain = new Brain(*other.brain);  
+}
 
 Dog& Dog::operator=(const Dog &other)
 {
     if (this != &other)
     {
-        delete brain;
+        if (brain)
+            delete brain;
         brain = new Brain(*other.brain);
         std::cout << "Dog assigned" << std::endl;
     }
